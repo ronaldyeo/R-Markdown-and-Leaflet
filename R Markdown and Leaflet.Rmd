@@ -1,0 +1,23 @@
+---
+title: "R Markdown and Leaflet"
+author: "Ronald"
+date: "16 Jan 2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown and Leaflet
+
+```{r}
+library(tidyverse)
+library(leaflet)
+
+my_map <- leaflet() %>% 
+  addTiles() %>%
+  addMarkers(lat=22.3193, lng=114.1694, popup="Hong Kong")
+my_map
+
+```
